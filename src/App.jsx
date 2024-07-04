@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 import Card from './components/Card.jsx'
+import Modal from './components/Modal.jsx'
 import './App.css'
 
 function App() {
 
   // STATE DECLARATIONS //
-  const [apiData, setApiData] = useState(null);
-  const [modalOpen, setModalOpen] = useState(false);
+  const [apiData, setApiData] = useState(null);  
+  const [cart, setCart] = useState([])
 
   // API DATA FETCHING //
   useEffect(() => {
@@ -37,7 +38,7 @@ function App() {
           <div className='grid grid-cols-1 md:grid-cols-2 ml:grid-cols-3 lg:grid-cols-4 gap-x-10'>
             {apiData ? 
             apiData.map((el) => (
-              <Card key={el.id} pImage={el.image} pName={el.title} pPrice={el.price} pDesc={el.description}/>
+              <Card key={el.id} pImage={el.image} pName={el.title} pPrice={el.price} pDesc={el.description} />
             ))
             :
             <div>Loading...</div>
