@@ -28,7 +28,7 @@ function Card(props) {
         <div className='text-center'>{shortenTitle(props.pName)}</div>
         <div>${props.pPrice}</div>
         <div className='truncate w-11/12 mb-4'>{props.pDesc}</div>
-        <button className='border rounded-lg text-sm  w-32 h-8 justify-center mb-2' onClick={triggerModalFunc}>View Details</button>
+        <button className='border rounded-lg text-sm  w-32 h-8 justify-center mb-2 hover:bg-slate-50' onClick={triggerModalFunc}>View Details</button>
       </div>
 
       {modalOpen ? <Modal pImage={props.pImage} pName={props.pName} pPrice={props.pPrice} pDesc={props.pDesc} triggerModal={triggerModalFunc} addToCart={props.addToCart}/> : null}

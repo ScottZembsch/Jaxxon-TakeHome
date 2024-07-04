@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Header from './components/Header.jsx'
 import Card from './components/Card.jsx'
 import Modal from './components/Modal.jsx'
 import './App.css'
@@ -41,7 +42,7 @@ function App() {
   // RETURN STATEMENT // 
   return (
     <>
-      <div className="text-6xl font-bold">Mock Store</div>
+      <Header cart={cart}/>
       
       <div className='flex justify-center'>
         <div className='flex flex-col items-center'>

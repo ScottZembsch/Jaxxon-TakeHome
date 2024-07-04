@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 .modal-master {
-  @apply bg-white border rounded-md w-1/2 h-3/4 fixed flex flex-col top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-auto;
+  @apply bg-white border rounded-md w-1/2 h-3/4 fixed flex flex-col top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-auto shadow-xl;
 }
 
 .modal-btn {
   @apply text-red-500 fixed top-0 right-0 mr-2 mt-2 text-lg w-16 border rounded-md
-  hover:text-red-600 font-bold ;
+  hover:text-red-600 font-bold  hover:bg-slate-50 ;
 }
 
 .modal-img {
@@ -28,5 +28,10 @@
 }
 
 .modal-desc {
-  @apply text-center w-4/5
+  @apply text-center w-4/5 mb-3
+}
+
+.modal-cart-btn {
+  @apply border rounded-lg text-sm  w-32 h-8 justify-center mb-2
+  hover:bg-slate-50;
 }
