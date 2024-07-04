@@ -25,9 +25,9 @@ function Card(props) {
     <>
       <div className="mb-4 w-96 border rounded-md flex flex-col items-center hover:shadow-lg transition duration-100 ease-in-out">
         <img className='h-80' src={props.pImage} alt="" />
-        <div className='text-center'>{shortenTitle(props.pName)}</div>
+        <div className='text-center font-bold'>{shortenTitle(props.pName)}</div>
         <div>${props.pPrice}</div>
-        <div className='truncate w-11/12 mb-4'>{props.pDesc}</div>
+        <div className='truncate w-11/12 mb-4 font-light italic'>{props.pDesc}</div>
         <button className='border rounded-lg text-sm  w-32 h-8 justify-center mb-2 hover:bg-slate-50' onClick={triggerModalFunc}>View Details</button>
       </div>
 
