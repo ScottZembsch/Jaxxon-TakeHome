@@ -2,6 +2,9 @@ import React from 'react'
 import '../App.css'
 
 function Modal(props) {
+
+  
+
   return (
     <>
       <div className='modal-master'>
@@ -12,7 +15,7 @@ function Modal(props) {
           <div className='modal-desc'>{props.pDesc}</div>
         </div>
         <button className='modal-btn' onClick={props.triggerModal}>X</button>
-        <button>Add To Cart</button>
+        <button onClick={()=> {props.addToCart(props.pName)}}>Add To Cart</button>
       </div>
     </>
   )

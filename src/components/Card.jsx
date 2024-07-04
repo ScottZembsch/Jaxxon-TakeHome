@@ -3,8 +3,6 @@ import '../App.css'
 import Modal from './Modal'
 
 function Card(props) {
-
-    // STATE DECLARATIONS //
   const [modalOpen, setModalOpen] = useState(false);
 
   // SHORTEN DESCRIPTION FUNCTION //
@@ -21,6 +19,7 @@ function Card(props) {
     modalOpen ? setModalOpen(false) : setModalOpen(true)
   }
 
+
   // RETURN STATEMENT // 
   return (
     <>
@@ -32,7 +31,7 @@ function Card(props) {
         <button className='border rounded-lg text-sm  w-32 h-8 justify-center mb-2' onClick={triggerModalFunc}>View Details</button>
       </div>
 
-      {modalOpen ? <Modal pImage={props.pImage} pName={props.pName} pPrice={props.pPrice} pDesc={props.pDesc} triggerModal={triggerModalFunc}/> : null}
+      {modalOpen ? <Modal pImage={props.pImage} pName={props.pName} pPrice={props.pPrice} pDesc={props.pDesc} triggerModal={triggerModalFunc} addToCart={props.addToCart}/> : null}
     
     </>
   )

@@ -7,6 +7,7 @@ function App() {
 
   // STATE DECLARATIONS //
   const [apiData, setApiData] = useState(null);  
+
   const [cart, setCart] = useState([])
 
   // API DATA FETCHING //
@@ -28,6 +29,15 @@ function App() {
   },[])
 
 
+
+  // ADD TO CART FUNCTION // 
+  const addToCart = (item) => {
+
+    setCart((prevCart) => [...prevCart, item]);
+    console.log(cart)
+  }
+
+
   // RETURN STATEMENT // 
   return (
     <>
@@ -38,7 +48,7 @@ function App() {
           <div className='grid grid-cols-1 md:grid-cols-2 ml:grid-cols-3 lg:grid-cols-4 gap-x-10'>
             {apiData ? 
             apiData.map((el) => (
-              <Card key={el.id} pImage={el.image} pName={el.title} pPrice={el.price} pDesc={el.description} />
+              <Card key={el.id} pImage={el.image} pName={el.title} pPrice={el.price} pDesc={el.description} addToCart={addToCart}/>
             ))
             :
             <div>Loading...</div>

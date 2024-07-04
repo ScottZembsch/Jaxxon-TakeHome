@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 .modal-master {
-  @apply bg-white border rounded-md w-1/2 h-3/4 fixed flex flex-col justify-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-auto;
+  @apply bg-white border rounded-md w-1/2 h-3/4 fixed flex flex-col top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-auto;
 }
 
 .modal-btn {
-  @apply text-red-500 absolute top-0 right-0 mr-2 mt-2 text-lg w-16 border rounded-md
+  @apply text-red-500 fixed top-0 right-0 mr-2 mt-2 text-lg w-16 border rounded-md
   hover:text-red-600 font-bold ;
 }
 
 .modal-img {
-  @apply h-4/6 w-full object-contain mb-5;
+  @apply h-4/6 w-full object-contain mb-5 mt-4;
 }
 
 .modal-info-container {
